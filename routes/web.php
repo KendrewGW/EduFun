@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::prefix('category', function () {
+Route::prefix('/category')->group(function () {
     Route::get('/datascience', function () {
         return view('category.datascience');
     });
