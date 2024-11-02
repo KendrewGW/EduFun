@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('writer', function (Blueprint $table) {
-            $table->id('writer_id');
-            $table->string('name');
-            $table->string('category');
-            $table->string('specialist');
-            $table->string('profile_image')->default(null)->nullable();
+        Schema::create('category', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }
@@ -24,8 +21,8 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void    
+    public function down(): void
     {
-        Schema::dropIfExists('writer');
+        Schema::dropIfExists('category');
     }
 };

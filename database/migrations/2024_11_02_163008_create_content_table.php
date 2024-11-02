@@ -13,14 +13,12 @@ return new class extends Migration
     {
         Schema::create('content', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('writer_id');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('writer_id')->references('writer_id')->on('writer')->onDelete('cascade'); // Foreign key
-            $table->foreign('category_id')->references('category_id')->on('category')->onDelete('cascade'); // Foreign key
-            $table->string('profile_image')->default(null)->nullable();
             $table->string('title');
             $table->text('body');
-            $table->timestamp('posted_at')->default(now());
+            $table->date('release_date');
+            $table->foreignId('writer_id')->constrained('writer')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained('category')->onDelete('cascade');
+            $table->string('image')->default(null)->nullable();
             $table->timestamps();
         });
     }

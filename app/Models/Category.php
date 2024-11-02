@@ -5,19 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Writer extends Model
+class Category extends Model
 {
     //
     use HasFactory;
-    protected $table ='writer';
+    protected $table = 'category';
     protected $fillable = [
         'id',
-        'name',
-        'category_id',
-        'profile_image'
+        'name'
     ];
-
-    public function writer(){
-        return $this->hasMany(Content::class);
-    }
 }

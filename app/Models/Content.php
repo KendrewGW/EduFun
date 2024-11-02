@@ -2,19 +2,24 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Content extends Model
 {
     //
+    use HasFactory;
     protected $table = 'content';
-    protected $fillable =[
-        'name', 
-        'category', 
-        'specialist'
+    protected $fillable = [
+        'id',
+        'title',
+        'body',
+        'writer_id',
+        'category_id',
+        'image'
     ];
 
-    public function writer(){
+    public function content(){
         return $this->belongsTo(Writer::class);
     }
 }
