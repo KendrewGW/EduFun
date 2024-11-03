@@ -8,7 +8,7 @@
 </head>
 <body>
     <footer class="container-fluid bg-dark text-center text-white p-4">
-        ©EduFun 2024| Web Programming | Kendrew Giantori Widjaja | 2602064273
+        ©EduFun 2024 | Web Programming | Kendrew Giantori Widjaja | 2602064273
     </footer>
 </body>
 </html>

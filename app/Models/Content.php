@@ -19,7 +19,11 @@ class Content extends Model
         'image'
     ];
 
-    public function content(){
+    public function writer(){
         return $this->belongsTo(Writer::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class);
     }
 }

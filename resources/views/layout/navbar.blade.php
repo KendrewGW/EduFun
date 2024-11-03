@@ -9,11 +9,20 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="container-fluid bg-white shadow d-flex justify-content-between align-items-center p-4">
+    <nav class="container-fluid bg-white shadow d-flex justify-content-between align-items-center p-4 pt-3 pb-3">
         <h3 class="font-opensans">EduFun</h3>
-        <div>
+        <div class="d-flex">
             <a href="" class="ms-5">Home</a>
-            <a href="" class="ms-5">Category</a>
+            <a class="dropdown-toggle ms-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Category
+            </a>
+              <ul class="dropdown-menu">
+                @foreach ($categories as $c)
+                    <li><a class="dropdown-item" href="#">{{ $c->name }}</a></li>
+                @endforeach
+                {{-- <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li> --}}
+              </ul>
             <a href="" class="ms-5">Writers</a>
             <a href="" class="ms-5">About Us</a>
             <a href="" class="ms-5">Popular</a>

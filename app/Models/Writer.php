@@ -17,7 +17,11 @@ class Writer extends Model
         'profile_image'
     ];
 
-    public function writer(){
+    public function content(){
         return $this->hasMany(Content::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class);
     }
 }

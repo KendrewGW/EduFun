@@ -14,4 +14,12 @@ class Category extends Model
         'id',
         'name'
     ];
+
+    public function writer(){
+        return $this->hasMany(Writer::class);
+    }
+
+    public function content(){
+        return $this->hasMany(Content::class);
+    }
 }
