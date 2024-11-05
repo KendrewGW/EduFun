@@ -10,10 +10,8 @@ class PopularController extends Controller
 {
     //
     public function index(){
-        $contents = Content::all();
+        $contents = Content::with(['writer', 'category'])->inRandomOrder()->paginate(3);
         $categories = Category::all();
-        $contents = Content::with('writer')->get();
-        $contents = Content::with('category')->get();
         return view('popular', compact('contents', 'categories'));
     }
 }

@@ -17,23 +17,15 @@ class WriterSeeder extends Seeder
         $writers = [
         [   'name' => 'Raka Putra Wicaksono',
             'category_id' => '1',
-            'profile_image' => 'image.smilingman.jpg'
-        ],
-        [   'name' => 'Devrin Hocellino',
-            'category_id' => '2',
-            'profile_image' => 'image.smilingman.jpg'
-        ],
-        [   'name' => 'Wilbert Luciano Sulastio',
-            'category_id' => '2',
-            'profile_image' => 'image.smilingman.jpg'
+            'profile_image' => 'smilingman.jpg'
         ],
         [   'name' => 'Furina',
             'category_id' => '2',
-            'profile_image' => 'image.smilingman.jpg'
+            'profile_image' => 'furina-shocked.jpg'
         ],
-        [   'name' => 'Hu Tao',
+        [   'name' => 'Jack Speed',
             'category_id' => '2',
-            'profile_image' => 'image.smilingman.jpg'
+            'profile_image' => 'man.jpg'
         ],
         ];
 

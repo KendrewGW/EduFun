@@ -12,22 +12,19 @@
     <nav class="container-fluid bg-white shadow d-flex justify-content-between align-items-center p-4 pt-3 pb-3">
         <h3 class="font-opensans">EduFun</h3>
         <div class="d-flex">
-            <a href="" class="ms-5">Home</a>
+            <a href="{{ route('home') }}" class="ms-5">Home</a>
             <a class="dropdown-toggle ms-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Category
             </a>
               <ul class="dropdown-menu">
                 @foreach ($categories as $c)
-                    <li><a class="dropdown-item" href="#">{{ $c->name }}</a></li>
+                    <li><a class="dropdown-item" href="{{ route(strtolower(str_replace(' ', '', $c->name))) }}">{{ $c->name }}</a></li>
                 @endforeach
-                {{-- <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li> --}}
               </ul>
-            <a href="" class="ms-5">Writers</a>
-            <a href="" class="ms-5">About Us</a>
-            <a href="" class="ms-5">Popular</a>
+            <a href="{{ route('writer') }}" class="ms-5">Writers</a>
+            <a href="{{ route('aboutus') }}" class="ms-5">About Us</a>
+            <a href="{{ route('popular') }}" class="ms-5">Popular</a>
         </div>
-        
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

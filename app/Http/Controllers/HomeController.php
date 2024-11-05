@@ -10,10 +10,8 @@ class HomeController extends Controller
 {
     //
     public function index(){
-        $contents = Content::all();
+        $contents = Content::with(['writer', 'category'])->get();
         $categories = Category::all();
-        $contents = Content::with('writer')->get();
-        $contents = Content::with('category')->get();
         return view('home', compact('contents', 'categories'));
     }
 }

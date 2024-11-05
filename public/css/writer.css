@@ -1,0 +1,10 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.profile_image{
+    width: 150px; 
+    height: 150px;
+}

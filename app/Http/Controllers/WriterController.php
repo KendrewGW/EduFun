@@ -11,7 +11,7 @@ class WriterController extends Controller
     public function index(){
         $writers = Writer::all();
         $categories = Category::all();
-        $writers = Writer::with('category')->get();
+        $writers = Writer::with('category')->paginate(3);
         return view('writers', compact('writers', 'categories'));
     }
 }
